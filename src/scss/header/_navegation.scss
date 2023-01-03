@@ -1,3 +1,35 @@
-.navegation {
-  background-color: red;
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nav-principal {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+
+  @include m.tablet {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  a {
+    text-align: center;
+    color: v.$white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: v.$secondary;
+    }
+
+    &.active {
+      color: v.$secondary;
+    }
+  }
 }
