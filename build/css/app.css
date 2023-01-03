@@ -372,9 +372,48 @@ h3 {
 }
 
 .header {
-  color: red;
+  padding: 5rem 0;
+  position: relative;
+}
+.header::before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.6;
+}
+.header .content-header {
+  position: relative;
+}
+.header-home {
+  background-image: url(../img/header_inicio.jpg);
 }
 
 .navegation {
   background-color: red;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.bar .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .bar .logo {
+    width: 20rem;
+    margin: 0;
+  }
 }

@@ -1,0 +1,23 @@
+@use "variables" as v;
+
+@mixin bgColor($color) {
+  background-color: $color;
+}
+
+@mixin telephone {
+  @media (min-width: v.$telephone) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: v.$tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: v.$desktop) {
+    @content;
+  }
+}
