@@ -346,28 +346,13 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.bg-primary {
-  background-color: #5e311e;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.margin-negative-10 {
-  margin-top: -10rem;
 }
 
 h1,
@@ -421,6 +406,8 @@ h3 {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -453,6 +440,18 @@ h3 {
 }
 .header-home {
   background-image: url(../img/header_inicio.jpg);
+}
+.header-about-us {
+  background-image: url(../img/header_nosotros.jpg);
+}
+.header-process {
+  background-image: url(../img/header_proceso.jpg);
+}
+.header-menu {
+  background-image: url(../img/header_menu.jpg);
+}
+.header-gallery {
+  background-image: url(../img/header_galeria.jpg);
 }
 
 .nav-principal {
@@ -729,4 +728,115 @@ h3 {
 .footer-box a {
   font-size: 2rem;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .content-about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.content-about-us .image {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .content-about-us .image {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+.content-about-us .image img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #ffffff;
+  box-shadow: 0.9rem 1rem 0.5rem -0.7rem rgba(0, 0, 0, 0.35);
+}
+.content-about-us .text blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5e311e;
+  font-size: 2rem;
+}
+
+.process-coffee {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .process-coffee {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.process-coffee:last-of-type {
+  margin-bottom: 0;
+}
+.process-coffee:nth-child(even) .text {
+  order: -1;
+}
+.process-coffee .image,
+.process-coffee .text {
+  flex: 1;
+}
+.process-coffee .text {
+  margin-top: 1rem;
+}
+.process-coffee .text h3 {
+  margin: 0;
+  text-align: left;
+  color: #5e311e;
+}
+.process-coffee .text h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: #c39c63;
+}
+
+.content-menu {
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/6;
+}
+@media (min-width: 480px) {
+  .content-menu {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 768px) {
+  .content-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
+.content-menu .text p {
+  font-size: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: #5e311e;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negative-10 {
+  margin-top: -10rem;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
