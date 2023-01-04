@@ -340,6 +340,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 img {
@@ -686,4 +687,46 @@ h3 {
   font-size: 2.4rem;
   color: #5e311e;
   font-family: "Bona Nova", serif;
+}
+
+.footer {
+  background-color: #5e311e;
+}
+.footer .footer-content {
+  padding: 5rem;
+}
+@media (min-width: 768px) {
+  .footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.footer .copyright {
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+.footer-box {
+  font-family: "Bona Nova", serif;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .footer-box {
+    margin-bottom: 0;
+  }
+}
+.footer-box h3 {
+  font-family: "Bona Nova", serif;
+  margin: 0 0 1rem 0;
+  font-size: 2.4rem;
+  color: #c39c63;
+}
+.footer-box p,
+.footer-box a {
+  font-size: 2rem;
+  margin: 0;
 }
