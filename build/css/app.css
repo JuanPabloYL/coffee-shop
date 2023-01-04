@@ -508,9 +508,7 @@ h3 {
   .icons .list-icons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    -webkit-column-gap: 5rem;
-       -moz-column-gap: 5rem;
-            column-gap: 5rem;
+    gap: 5rem;
   }
 }
 .icons .list-icons li img {
@@ -521,4 +519,10 @@ h3 {
   font-family: "Bona Nova", serif;
   font-size: 3.2rem;
   color: #5e311e;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }

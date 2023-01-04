@@ -1,0 +1,6 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.gallery {
+  @include m.grid(2, 2rem);
+}
