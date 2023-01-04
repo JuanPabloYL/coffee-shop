@@ -361,6 +361,14 @@ ul {
   background-color: #5e311e;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negative-10 {
+  margin-top: -10rem;
+}
+
 h1,
 h2,
 .heading-white,
@@ -656,4 +664,26 @@ h3 {
 .menu li .price {
   font-size: 4rem;
   font-weight: 700;
+}
+
+.our-testimonials {
+  padding: 10rem 2rem;
+}
+@media (min-width: 768px) {
+  .our-testimonials {
+    padding: 10rem;
+  }
+}
+.our-testimonials .testimonial {
+  background-color: #ebe7de;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+}
+.our-testimonials .testimonial .author {
+  text-align: right;
+  font-size: 2.4rem;
+  color: #5e311e;
+  font-family: "Bona Nova", serif;
 }
