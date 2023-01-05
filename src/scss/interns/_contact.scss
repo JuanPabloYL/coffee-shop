@@ -58,3 +58,104 @@
     }
   }
 }
+
+.content-order {
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  font-size: 1.8rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 2rem rgb(0 0 0 / 0.15);
+  width: 100%;
+
+  thead {
+    tr {
+      background-color: v.$primary;
+      color: v.$white;
+    }
+  }
+
+  th,
+  td {
+    padding: 1.2rem 1.5rem;
+  }
+
+  tbody {
+    tr {
+      text-align: center;
+      border-bottom: 1px solid v.$primary;
+
+      &:nth-child(even) {
+        background-color: lighten(v.$secondary, 35%);
+      }
+
+      &:last-of-type {
+        border-bottom: 2px solid v.$primary;
+      }
+    }
+  }
+
+  input {
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+
+  .order-amount {
+    @include m.tablet {
+      width: 20%;
+    }
+
+    @include m.desktop {
+      width: 10%;
+    }
+  }
+}
+
+.content {
+  @include m.grid(1, 2rem);
+  @include m.tablet {
+    padding: 10rem;
+    @include m.grid(2, 2rem);
+  }
+}
+
+.content-consumed {
+  background-color: v.$secondary;
+  padding: 1rem;
+
+  @include m.boldNormal;
+  &-dishes {
+    border: 1px solid v.$white;
+    padding: 2rem;
+
+    @include m.boldNormal;
+
+    button {
+      background-color: v.$alertError;
+      border: none;
+      padding: 1rem 2rem;
+      color: v.$white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.tips {
+  background-color: v.$secondary;
+  padding: 1rem;
+
+  &-field {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-summary {
+    @include m.boldNormal;
+  }
+}

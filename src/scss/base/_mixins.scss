@@ -27,3 +27,13 @@
   grid-template-columns: repeat($colums, 1fr);
   gap: $column-gap;
 }
+
+@mixin boldNormal {
+  p {
+    font-weight: 700;
+
+    span {
+      font-weight: 400;
+    }
+  }
+}

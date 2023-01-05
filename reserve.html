@@ -51,7 +51,10 @@
     </header>
 
     <main class="container content-main">
-      <h2><span>Reserve your</span> place</h2>
+      <h2 class="hidden"><span>Reserve your</span> place</h2>
+
+      <h2 class="dishes-heading d-none">Dishes</h2>
+      <!-- This -->
 
       <div class="content-contact">
         <form class="form">
@@ -87,7 +90,79 @@
           </div>
         </form>
       </div>
+
+      <div class="dishes-content d-none">
+        <!-- This -->
+        <table class="content-order">
+          <thead>
+            <tr>
+              <th>Dish</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+
+          <tbody id="content-order">
+            <!-- <tr>
+              <td>Baguette</td>
+              <td>25$</td>
+              <td>Food</td>
+              <td class="order-amount">
+                <input type="number" min="0" value="0" />
+              </td>
+            </tr>
+          --></tbody>
+        </table>
+      </div>
     </main>
+
+    <section id="summary" class="container bg-white d-none">
+      <!-- This -->
+      <h2 class="text-center">Summary of consumption</h2>
+      <div class="content container">
+        <!-- <div class="content-consumed"> -->
+        <!-- <p class="margin-0 text-center">Add elements to the order</p> -->
+        <!-- <p>Table:<span> 5</span></p>
+          <p>Time:<span> 20:00</span></p>
+
+          <div class="content-consumed-dishes">
+            <h4>Pizza a la leña chica</h4>
+            <p>Amount: <span>2</span></p>
+            <p>Price: <span>$30</span></p>
+            <p>Subtotal: <span>$60</span></p>
+
+            <button>Delete order</button>
+          </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="tips container">
+          <h4>Tips</h4>
+          <form class="tips-form">
+            <div class="tips-field">
+              <input type="radio" id="ten" name="tips" />
+              <label for="ten">10%</label>
+            </div>
+
+            <div class="tips-field">
+              <input type="radio" id="twenty-five" name="tips" />
+              <label for="twenty-five">25%</label>
+            </div>
+
+            <div class="tips-field">
+              <input type="radio" id="fifty-five" name="tips" />
+              <label for="fifty-five">55%</label>
+            </div>
+          </form>
+
+          <div class="tips-summary">
+            <p>Subtotal Consummed:<span> $390</span></p>
+            <p>Tip:<span> $97.5</span></p>
+            <p>Total to Pay:<span> $487.5</span></p>
+          </div>
+        </div> -->
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container footer-content bg-white">

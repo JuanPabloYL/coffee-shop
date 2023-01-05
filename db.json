@@ -1,5 +1,5 @@
 {
-  "coffee": [
+  "dishes": [
     {
       "id": 1,
       "name": "Coffee Latte",
@@ -48,9 +48,7 @@
       "description": "Espresso, milk and caramel.",
       "price": 39,
       "category": 1
-    }
-  ],
-  "food": [
+    },
     {
       "id": 8,
       "name": "Chicken Baguette",
