@@ -14,6 +14,7 @@
 .form {
   .field {
     margin-bottom: 2rem;
+    position: relative;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -31,6 +32,23 @@
       width: 100%;
       padding: 1rem;
       border: 0.5rem solid v.$primary;
+
+      &.error {
+        border: 0.5rem solid v.$alertError;
+      }
+    }
+
+    input.error + small {
+      visibility: visible;
+    }
+
+    small {
+      font-size: 1.8rem;
+      color: v.$alertError;
+      position: absolute;
+      left: 0;
+      bottom: -2.2rem;
+      visibility: hidden;
     }
 
     input[type="submit"] {

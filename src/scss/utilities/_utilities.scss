@@ -19,3 +19,24 @@
 .padding-bottom-0 {
   padding-bottom: 0;
 }
+
+.alert-box {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+
+  &.error {
+    background-color: v.$alertError;
+  }
+
+  &.success {
+    background-color: v.$alertSuccess;
+  }
+}
+
+.alert-text {
+  margin: 0;
+  color: v.$white;
+  font-weight: bold;
+  text-transform: uppercase;
+}

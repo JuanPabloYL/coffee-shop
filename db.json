@@ -1,0 +1,104 @@
+{
+  "coffee": [
+    {
+      "id": 1,
+      "name": "Coffee Latte",
+      "description": "Espresso coffee with hot evaporated milk",
+      "price": 25,
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Coffee Mocha",
+      "description": "Espresso with whipped cream",
+      "price": 30,
+      "category": 1
+    },
+    {
+      "id": 3,
+      "name": "Coffee American",
+      "description": "Black coffee",
+      "price": 30,
+      "category": 1
+    },
+    {
+      "id": 4,
+      "name": "Capuccino",
+      "description": "Espresso with a soft foam layer",
+      "price": 25,
+      "category": 1
+    },
+    {
+      "id": 5,
+      "name": "Cold Mocha Coffee",
+      "description": "Espresso, sweet with mocha and milk.",
+      "price": 29,
+      "category": 1
+    },
+    {
+      "id": 6,
+      "name": "Mocha Cold Burned",
+      "description": "Espresso, ice, with burnt sugar and butter.",
+      "price": 35,
+      "category": 1
+    },
+    {
+      "id": 7,
+      "name": "Latte with Caramel",
+      "description": "Espresso, milk and caramel.",
+      "price": 39,
+      "category": 1
+    }
+  ],
+  "food": [
+    {
+      "id": 8,
+      "name": "Chicken Baguette",
+      "description": "Delicious Baguette with grilled chicken",
+      "price": 45,
+      "category": 2
+    },
+    {
+      "id": 9,
+      "name": "Chicken and Cheese Baguette",
+      "description": "Baguette combined with Chicken and Manchego Cheese",
+      "price": 50,
+      "category": 2
+    },
+    {
+      "id": 10,
+      "name": "Baguette with Bacon",
+      "description": "Baguette with spices and vegetables plus bacon",
+      "price": 50,
+      "category": 2
+    },
+    {
+      "id": 11,
+      "name": "Ham Baguette",
+      "description": "Delicious Baguette with Ham and Spices",
+      "price": 65,
+      "category": 2
+    },
+    {
+      "id": 12,
+      "name": "Baguette with Ham, Cheese and Bacon",
+      "description": "The house special",
+      "price": 69,
+      "category": 2
+    },
+    {
+      "id": 13,
+      "name": "Chicken Sandwich",
+      "description": "Delicious sandwich with chicken and spices",
+      "price": 65,
+      "category": 2
+    },
+    {
+      "id": 14,
+      "name": "Ham and Cheese Sandwich",
+      "description": "Yellow Cheese with Ham and Cheese",
+      "price": 59,
+      "category": 2
+    }
+  ]
+}

@@ -24,6 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="build/css/app.css" />
+    <script defer type="module" src="src/js/app.js"></script>
   </head>
   <body>
     <header class="header header-contact">
@@ -39,7 +40,7 @@
             <a href="process.html">Process</a>
             <a href="menu.html">Menu</a>
             <a href="gallery.html">Gallery</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="reserve.html" class="active">Reserve</a>
           </nav>
         </div>
 
@@ -57,11 +58,14 @@
           <div class="field">
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Your name" />
+            <small>Error message</small>
           </div>
           <div class="field">
             <label for="email">Email:</label>
             <input type="text" id="email" placeholder="Your email" />
+            <small>Error message</small>
           </div>
+
           <div class="field">
             <label for="email">Number of people:</label>
             <select name="people" id="people">
@@ -72,20 +76,32 @@
               <option value="4">4</option>
               <option value="more">+4</option>
             </select>
+            <small>Error message</small>
+          </div>
+
+          <div class="field">
+            <label for="date">Table:</label>
+            <input type="number" min="1" max="15" id="table" />
+            <small>Error message</small>
           </div>
 
           <div class="field">
             <label for="time">Time:</label>
             <input type="time" id="time" />
+            <small>Error message</small>
           </div>
 
           <div class="field">
-            <label for="date">Time:</label>
+            <label for="date">Date:</label>
             <input type="date" id="date" />
+            <small>Error message</small>
           </div>
 
           <div class="field">
-            <input type="submit" value="Send" id="submit" />
+            <input type="submit" value="Send" id="save-customer" />
+          </div>
+          <div class="alert-box">
+            <p class="alert-text">All fields are required</p>
           </div>
         </form>
       </div>
