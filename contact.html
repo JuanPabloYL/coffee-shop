@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffe Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <header class="header header-contact">
+      <div class="content-header container">
+        <div class="bar">
+          <div class="logo">
+            <img src="build/img/logo.svg" alt="logo coffe shop" />
+          </div>
+
+          <nav class="nav-principal">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About us</a>
+            <a href="process.html">Process</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active">Contact</a>
+          </nav>
+        </div>
+
+        <div class="text-header">
+          <h1>Better beans better coffee</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="container content-main">
+      <h2><span>Reserve your</span> place</h2>
+
+      <div class="content-contact">
+        <form>
+          <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Your email" />
+          </div>
+          <div class="field">
+            <label for="email">Number of people:</label>
+            <select name="people" id="people">
+              <option value="" disabled selected>-- Select --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="more">+4</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="time">Time:</label>
+            <input type="time" id="time" />
+          </div>
+
+          <div class="field">
+            <label for="date">Time:</label>
+            <input type="date" id="date" />
+          </div>
+
+          <div class="field">
+            <input type="submit" value="Send" id="submit" />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content bg-white">
+        <div class="footer-box location">
+          <h3>Location</h3>
+          <p>Nicolas Copernico 5990</p>
+          <p>Vancouver, Canada</p>
+        </div>
+        <div class="footer-box reservation">
+          <h3>Reservation</h3>
+          <p>Tel. 4856 8455 2555</p>
+          <a href="tel:1224568">Call</a>
+        </div>
+        <div class="footer-box schedule">
+          <h3>Schedule</h3>
+          <p>Mon - Thu 11:00 - 22:00</p>
+          <p>Fri - Sat 09:00 - 24:00</p>
+          <p>Close Sundays</p>
+        </div>
+      </div>
+      <p class="copyright">All rights reserved The Coffee Shop</p>
+    </footer>
+  </body>
+</html>
