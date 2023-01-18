@@ -218,7 +218,7 @@ function updateSummary() {
 
     // Subtotal of article
     const subtotaltEl = document.createElement("P");
-    subtotaltEl.textContent = "Subtital: ";
+    subtotaltEl.textContent = "Subtotal: ";
 
     const subtotalValue = document.createElement("SPAN");
     subtotalValue.textContent = calculateSubtotal(price, amount);
@@ -317,10 +317,125 @@ function tipsForm() {
   form.classList.add("tips-form");
 
   // Radio Button 10%
-  const radioButtonContainer = document.createElement("DIV");
-  radioButtonContainer.classList.add("tips-field");
+  const radio10 = document.createElement("INPUT");
+  radio10.type = "radio";
+  radio10.name = "tips";
+  radio10.value = "10";
+  radio10.onclick = calculateTip;
 
+  const radio10Label = document.createElement("LABEL");
+  radio10Label.textContent = "10%";
+
+  const radio10Div = document.createElement("DIV");
+  radio10Div.classList.add(".tips-field");
+
+  radio10Div.appendChild(radio10);
+  radio10Div.appendChild(radio10Label);
+
+  // Radio Button 25%
+  const radio25 = document.createElement("INPUT");
+  radio25.type = "radio";
+  radio25.name = "tips";
+  radio25.value = "25";
+  radio25.onclick = calculateTip;
+
+  const radio25Label = document.createElement("LABEL");
+  radio25Label.textContent = "25%";
+
+  const radio25Div = document.createElement("DIV");
+  radio25Div.classList.add(".tips-field");
+
+  radio25Div.appendChild(radio25);
+  radio25Div.appendChild(radio25Label);
+
+  // Radio Button 50%
+  const radio50 = document.createElement("INPUT");
+  radio50.type = "radio";
+  radio50.name = "tips";
+  radio50.value = "50";
+  radio50.onclick = calculateTip;
+
+  const radio50Label = document.createElement("LABEL");
+  radio50Label.textContent = "50%";
+
+  const radio50Div = document.createElement("DIV");
+  radio50Div.classList.add(".tips-field");
+
+  radio50Div.appendChild(radio50);
+  radio50Div.appendChild(radio50Label);
+
+  // Add to main div
   formContainer.appendChild(heading);
+  formContainer.appendChild(radio10Div);
+  formContainer.appendChild(radio25Div);
+  formContainer.appendChild(radio50Div);
 
   content.appendChild(formContainer);
+}
+
+function calculateTip() {
+  const { order } = customer;
+  let subtotal = 0;
+
+  // Calculate subtotal to pay
+  order.forEach((article) => {
+    subtotal += article.amount * article.price;
+  });
+
+  // Select radio button with the customer's tip
+  const selectedTip = document.querySelector('[name="tips"]:checked').value;
+
+  // Calculate tip
+  const tip = (subtotal * parseInt(selectedTip)) / 100;
+  console.log(tip);
+
+  // Calculate total
+  const total = subtotal + tip;
+
+  showTotalHTML(subtotal, total, tip);
+}
+
+function showTotalHTML(subtotal, total, tip) {
+  const divTotals = document.createElement("DIV");
+  divTotals.classList.add("tips-summary");
+
+  // Subtotal
+  const subtotalParagraph = document.createElement("P");
+  subtotalParagraph.textContent = "Subtotal Consumption: ";
+
+  const subtotalSpan = document.createElement("SPAN");
+  subtotalSpan.textContent = `$${subtotal}`;
+
+  subtotalParagraph.appendChild(subtotalSpan);
+
+  // Tip
+  const tipParagraph = document.createElement("P");
+  tipParagraph.textContent = "Tip: ";
+
+  const tipSpan = document.createElement("SPAN");
+  tipSpan.textContent = `$${tip}`;
+
+  tipParagraph.appendChild(tipSpan);
+
+  // Total
+  const totalParagraph = document.createElement("P");
+  totalParagraph.textContent = "Total: ";
+
+  const totalSpan = document.createElement("SPAN");
+  totalSpan.textContent = `$${total}`;
+
+  totalParagraph.appendChild(totalSpan);
+
+  // Delete last result
+  const totalPaymentDiv = document.querySelector(".tips-summary");
+  if (totalPaymentDiv) {
+    totalPaymentDiv.remove();
+  }
+
+  divTotals.appendChild(subtotalParagraph);
+  divTotals.appendChild(tipParagraph);
+  divTotals.appendChild(totalParagraph);
+
+  const tipsContainer = document.querySelector(".tips");
+  tipsContainer.appendChild(divTotals);
 }
