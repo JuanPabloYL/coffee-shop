@@ -17,5 +17,6 @@ json-server will support all the verbs of an API as delete, patch, post, get, et
 2. Install dependencies with `npm i` or `npm install`
 3. If you are in Windows: Run power shell as administrator `npm install -g json server`
    If you are in Mac or Linux : Run in the terminal `sudo install -g json-server`
-4. Go to the project directory in the terminal and run `json-server --watch db.json --port 4000`
-5. Open the project in the browser
+4. Run `gulp` in the terminal
+5. Go to the project directory in the terminal and run `json-server --watch db.json --port 4000`
+6. Open the project in the browser
